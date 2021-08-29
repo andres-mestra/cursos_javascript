@@ -21,22 +21,17 @@ const andres = {
 };
 
 //Clases
-class Courses {
-  constructor({ name, classes = [] }) {
-    this.name = name;
-    this.classes = classes;
-  }
-}
+import { Course } from "./encapsulamiento/gettersSetters";
 
-const cursoProgBasica = new Courses({
+const cursoProgBasica = new Course({
   name: "Curso programación basica",
 });
 
-const cursoDefinitivoHTML = new Courses({
+const cursoDefinitivoHTML = new Course({
   name: "Curso definitivo HTML y CSS",
 });
 
-const cursoPracticoHTML = new Courses({
+const cursoPracticoHTML = new Course({
   name: "Curso práctico HTML y CSS",
 });
 
