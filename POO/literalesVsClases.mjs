@@ -21,14 +21,17 @@ const andres = {
 };
 
 //Clases
-import { Course } from "./encapsulamiento/gettersSetters";
+import { Course } from "./encapsulamiento/gettersSetters.mjs";
 
-const cursoProgBasica = new Course({
+export const cursoProgBasica = new Course({
   name: "Curso programación basica",
+  isFree: true,
 });
 
-const cursoDefinitivoHTML = new Course({
+export const cursoDefinitivoHTML = new Course({
   name: "Curso definitivo HTML y CSS",
+  lang: "English",
+  isFree: false,
 });
 
 const cursoPracticoHTML = new Course({
@@ -52,7 +55,7 @@ const desarrolloJuegos = new LearningPath({
   courses: [],
 });
 
-class Student {
+export class Student {
   constructor({
     name,
     email,

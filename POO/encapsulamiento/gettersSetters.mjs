@@ -1,7 +1,9 @@
 export class Course {
-  constructor({ name, classes = [] }) {
+  constructor({ name, classes = [], isFree = false, lang = "spanish" }) {
     this._name = name;
     this.classes = classes;
+    this.isFree = isFree;
+    this.lang = lang;
   }
 
   get name() {
@@ -21,7 +23,7 @@ const nuevoCurso = new Course({
   name: "Nuevo curso",
 });
 
-console.log(nuevoCurso.name);
+/* console.log(nuevoCurso.name);
 nuevoCurso.name = "Otro nombre";
 console.log(nuevoCurso.name);
-nuevoCurso.name = "Curso malo de programación";
+nuevoCurso.name = "Curso malo de programación"; */
