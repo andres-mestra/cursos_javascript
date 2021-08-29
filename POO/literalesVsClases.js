@@ -21,6 +21,25 @@ const andres = {
 };
 
 //Clases
+class Courses {
+  constructor({ name, classes = [] }) {
+    this.name = name;
+    this.classes = classes;
+  }
+}
+
+const cursoProgBasica = new Courses({
+  name: "Curso programación basica",
+});
+
+const cursoDefinitivoHTML = new Courses({
+  name: "Curso definitivo HTML y CSS",
+});
+
+const cursoPracticoHTML = new Courses({
+  name: "Curso práctico HTML y CSS",
+});
+
 class LearningPath {
   constructor({ name, courses = [] }) {
     this.name = name;
@@ -30,12 +49,12 @@ class LearningPath {
 
 const desarrolloWeb = new LearningPath({
   name: "Escuela de desarrollo web",
-  courses: ["Curso práctico de html y css"],
+  courses: [cursoProgBasica, cursoDefinitivoHTML, cursoPracticoHTML],
 });
 
 const desarrolloJuegos = new LearningPath({
   name: "Escuela de desarrollo de video juegos",
-  courses: ["Curso de unity"],
+  courses: [],
 });
 
 class Student {
