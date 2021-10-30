@@ -34,3 +34,23 @@ let person = {
 console.log('Antes de es6: ', person.name, person.age, person.country);
 let { name, age, country } = person;
 console.log('Despues de es6: ', name, age, country);
+
+let = team1 = ['Oscar', 'Julian', 'Ricardo'];
+let = team2 = ['Valeria', 'Yesica', 'Camila'];
+
+let education = ['David', ...team1, ...team2];
+console.log({ education });
+
+// LET y CONTS
+{
+  var globalVar = 'GlobalVar';
+}
+{
+  let globalLet = 'GlobalLet';
+  console.log(globalLet);
+}
+console.log(globalVar);
+//console.log(globalLet);
+
+const a = 'b';
+//a = 'a'; //error
