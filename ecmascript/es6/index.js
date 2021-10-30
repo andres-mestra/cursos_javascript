@@ -54,3 +54,28 @@ console.log(globalVar);
 
 const a = 'b';
 //a = 'a'; //error
+
+let myName = 'Andres';
+let myAge = 24;
+
+obj = { myName, myAge };
+console.log({ obj });
+
+// Arrow functions
+const names = [{ name: 'Andres' }, { name: 'Yessica' }];
+
+let listOfNames = names.map((item) => item.name);
+console.log({ listOfNames });
+
+const helloPromise = (valid = true) => {
+  return new Promise((resolve, reject) => {
+    if (valid) {
+      resolve('Ey!');
+    } else {
+      reject('Ups!!');
+    }
+  });
+};
+
+helloPromise().then(console.log).catch(console.log);
+helloPromise(false).then(console.log).catch(console.log);
