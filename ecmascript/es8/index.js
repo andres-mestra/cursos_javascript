@@ -12,3 +12,16 @@ console.log({ values });
 
 const string = 'hello';
 console.log(string.padStart(8, 'hi '));
+
+const helloWorld = () => {
+  return new Promise((resolve, reject) => {
+    true ? setTimeout(() => resolve('Hello world'), 3000) : reject('Error');
+  });
+};
+
+const helloAsync = async () => {
+  const hello = await helloWorld();
+  console.log('Async hello: ', hello);
+};
+
+helloAsync();
