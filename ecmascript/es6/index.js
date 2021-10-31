@@ -79,3 +79,38 @@ const helloPromise = (valid = true) => {
 
 helloPromise().then(console.log).catch(console.log);
 helloPromise(false).then(console.log).catch(console.log);
+
+class Calculator {
+  constructor() {
+    this.valueA = 0;
+    this.valueB = 0;
+  }
+
+  sumar(a, b) {
+    this.valueA = a;
+    this.valueB = b;
+    return this.valueA + this.valueB;
+  }
+}
+
+const calc = new Calculator();
+console.log('Suma, ', calc.sumar(2, 3));
+
+//Aun no soportado en NodeJS
+//import hello from './modulo';
+//console.log('Hola: ', hello());
+
+function* helloWorld() {
+  if (true) {
+    yield 'Hello, ';
+  }
+
+  if (true) {
+    yield 'world';
+  }
+}
+
+const generatorHello = helloWorld();
+console.log(generatorHello.next().value);
+console.log(generatorHello.next().value);
+console.log(generatorHello.next().value);
